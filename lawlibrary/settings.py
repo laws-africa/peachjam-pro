@@ -30,7 +30,7 @@ TEMPLATES[0]["OPTIONS"]["context_processors"].append(  # noqa
 TEMPLATED_EMAIL_BACKEND = "peachjam.emails.CustomerIOTemplateBackend"
 
 
-LOGGING["loggers"]["peachjam_pay"] = {"level": "DEBUG" if DEBUG else "INFO"}
+LOGGING["loggers"]["peachjam_pay"] = {"level": "DEBUG" if DEBUG else "INFO"}  # noqa
 
 
 if not DEBUG:  # noqa
