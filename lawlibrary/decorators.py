@@ -1,8 +1,8 @@
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from peachjam.decorators import BreadCrumb, JudgmentDecorator, LegislationDecorator
 
 from lawlibrary.constants import MUNICIPAL_CODES, PROVINCIAL_CODES
-from peachjam.decorators import BreadCrumb, JudgmentDecorator, LegislationDecorator
 
 
 class LawLibraryLJudgmentDecorator(JudgmentDecorator):

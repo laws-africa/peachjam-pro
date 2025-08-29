@@ -1,0 +1,16 @@
+name: Update dependencies
+
+on:
+  repository_dispatch:
+    types: [dependency]
+
+jobs:
+  update-dependencies:
+    name: Update python dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: laws-africa/update-python-dependencies@main
+      with:
+        path: pyproject.toml
+        token: ${{ secrets.LA_ACTIONS_TOKEN }}

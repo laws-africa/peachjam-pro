@@ -1,6 +1,5 @@
 from countries_plus.models import Country
 from django.test import TestCase
-
 from peachjam.models import Locality
 
 

@@ -1,10 +1,10 @@
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
-
-from lawlibrary.constants import MUNICIPAL_CODES, PROVINCIAL_CODES
 from liiweb.views import LocalityLegislationListView as BaseLocalityLegislationListView
 from liiweb.views import LocalityLegislationView as BaseLocalityLegislationView
 from peachjam.models import Locality
+
+from lawlibrary.constants import MUNICIPAL_CODES, PROVINCIAL_CODES
 
 
 class LocalityLegislationView(BaseLocalityLegislationView):
