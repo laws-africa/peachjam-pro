@@ -1,3 +1,5 @@
+import os
+
 from liiweb.settings import *  # noqa
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # noqa
@@ -12,6 +14,7 @@ INSTALLED_APPS = [
     "peachjam_pay",
     "peachjam_subs",
     "peachjam_ml",
+    "allauth.socialaccount.providers.openid_connect",
 ] + INSTALLED_APPS  # noqa
 
 ROOT_URLCONF = "lawlibrary.urls"
@@ -22,12 +25,44 @@ JAZZMIN_SETTINGS["site_brand"] = "Lawlibrary.org.za"  # noqa
 
 PEACHJAM["MULTIPLE_LOCALITIES"] = True  # noqa
 
+PEACHJAM_PAY = {
+    "PAYFAST_MERCHANT_ID": os.environ.get("PAYFAST_MERCHANT_ID", ""),
+    "PAYFAST_MERCHANT_KEY": os.environ.get("PAYFAST_MERCHANT_KEY", ""),
+    "PAYFAST_SALT": os.environ.get("PAYFAST_SALT", ""),
+    "PAYFAST_SANDBOX": os.environ.get("PAYFAST_SANBOX", "").lower() == "true",
+}
 
 TEMPLATES[0]["OPTIONS"]["context_processors"].append(  # noqa
     "lawlibrary.context_processors.lawlibrary"
 )
 
 TEMPLATED_EMAIL_BACKEND = "peachjam.emails.CustomerIOTemplateBackend"
+
+SOCIALACCOUNT_STORE_TOKENS = True
+SOCIALACCOUNT_PROVIDERS["openid_connect"] = {  # noqa
+    "APPS": [
+        {
+            "provider_id": "xero",
+            "name": "Xero",
+            "client_id": os.environ.get("XERO_CLIENT_ID"),
+            "secret": os.environ.get("XERO_SECRET"),
+            "settings": {
+                "hidden": True,
+                "server_url": "https://identity.xero.com",
+                "token_auth_method": "client_secret_basic",
+            },
+        }
+    ],
+    "SCOPE": [
+        "openid",
+        "profile",
+        "email",
+        "offline_access",
+        "accounting.transactions",
+        "accounting.contacts",
+        "accounting.attachments",
+    ],
+}
 
 
 LOGGING["loggers"]["peachjam_pay"] = {"level": "DEBUG" if DEBUG else "INFO"}  # noqa
