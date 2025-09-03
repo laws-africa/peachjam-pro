@@ -25,6 +25,13 @@ JAZZMIN_SETTINGS["site_brand"] = "Lawlibrary.org.za"  # noqa
 
 PEACHJAM["MULTIPLE_LOCALITIES"] = True  # noqa
 
+PEACHJAM_PAY = {
+    "PAYFAST_MERCHANT_ID": os.environ.get("PAYFAST_MERCHANT_ID", ""),
+    "PAYFAST_MERCHANT_KEY": os.environ.get("PAYFAST_MERCHANT_KEY", ""),
+    "PAYFAST_SALT": os.environ.get("PAYFAST_SALT", ""),
+    "PAYFAST_SANDBOX": os.environ.get("PAYFAST_SANBOX", "").lower() == "true",
+}
+
 TEMPLATES[0]["OPTIONS"]["context_processors"].append(  # noqa
     "lawlibrary.context_processors.lawlibrary"
 )
