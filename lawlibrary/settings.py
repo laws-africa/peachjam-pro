@@ -25,10 +25,6 @@ JAZZMIN_SETTINGS["site_brand"] = "Lawlibrary.org.za"  # noqa
 
 PEACHJAM["MULTIPLE_LOCALITIES"] = True  # noqa
 
-# use Xero's IdentityApi().get_connections() to get the available tenants
-PEACHJAM_PAY = {"XERO_TENANT_ID": os.environ.get("XERO_TENANT_ID")}
-
-
 TEMPLATES[0]["OPTIONS"]["context_processors"].append(  # noqa
     "lawlibrary.context_processors.lawlibrary"
 )
