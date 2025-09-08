@@ -10,9 +10,7 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
 
 INSTALLED_APPS = [
     "lawlibrary.apps.LawlibraryConfig",
-    "django_fsm",
     "peachjam_pay",
-    "peachjam_subs",
     "peachjam_ml",
     "allauth.socialaccount.providers.openid_connect",
 ] + INSTALLED_APPS  # noqa
