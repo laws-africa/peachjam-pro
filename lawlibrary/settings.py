@@ -62,6 +62,7 @@ SOCIALACCOUNT_PROVIDERS["openid_connect"] = {  # noqa
     ],
 }
 
+LANGUAGES = [("en", "English")]
 
 LOGGING["loggers"]["peachjam_pay"] = {"level": "DEBUG" if DEBUG else "INFO"}  # noqa
 
