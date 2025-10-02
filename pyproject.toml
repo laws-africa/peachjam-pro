@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "peachjam @ git+https://github.com/laws-africa/peachjam.git@8ff35a513b62a28e37dcbaf645088f2a57c94a7e",
-    "peachjam-pay @ git+https://github.com/laws-africa/peachjam-pay.git@b5824011cc8dc34bfb2d848f8b3027194fe1fa1a",
+    "peachjam-pay @ git+https://github.com/laws-africa/peachjam-pay.git@b71e3022c33d31a2fa70426fd4176fe620334de5",
 ]
 
 [project.optional-dependencies]
