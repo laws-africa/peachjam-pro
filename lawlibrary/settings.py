@@ -8,9 +8,13 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
     os.environ.get("NODE_PATH") or os.path.join(BASE_DIR, "node_modules"),  # noqa
 ]
 
+# move peachjam_subs so template inheritance works correctly
+INSTALLED_APPS = [x for x in INSTALLED_APPS if x != "peachjam_subs"]  # noqa
+
 INSTALLED_APPS = [
     "lawlibrary.apps.LawlibraryConfig",
     "peachjam_pay",
+    "peachjam_subs",
     "peachjam_ml",
     "allauth.socialaccount.providers.openid_connect",
 ] + INSTALLED_APPS  # noqa
@@ -22,6 +26,9 @@ JAZZMIN_SETTINGS["site_header"] = "Lawlibrary"  # noqa
 JAZZMIN_SETTINGS["site_brand"] = "Lawlibrary.org.za"  # noqa
 
 PEACHJAM["MULTIPLE_LOCALITIES"] = True  # noqa
+PEACHJAM["PDFJS_TO_TEXT"] = (  # noqa
+    "../peachjam/bin/pdfjs-to-text" if DEBUG else "pdfjs-to-text"  # noqa
+)
 
 PEACHJAM_PAY = {
     "PAYFAST_MERCHANT_ID": os.environ.get("PAYFAST_MERCHANT_ID", ""),
