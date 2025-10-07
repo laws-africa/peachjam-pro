@@ -1,0 +1,169 @@
+{% extends 'peachjam_subs/subscribe.html' %}
+{% load i18n static %}
+{% block page-content %}
+  <div class="py-5 bg-brand-pale">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <h1 class="display-5 fw-bold">Work smarter. Stay current. Gain deeper insight.</h1>
+          <p class="lead text-muted">
+            My LawLibrary gives you professional-grade research tools that help you find answers faster,
+            keep on top of changes, and see connections others miss.
+          </p>
+          <a href="{% url 'subscription_pricing' %}"
+             class="btn btn-primary btn-lg mt-2">See plans &amp; pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center h-100 px-3">
+            <div class="bg-brand-pale p-4 rounded-3 h2 mb-3">
+              <i class="bi bi-clock"></i>
+            </div>
+            <h5 class="fw-semibold">Save Time</h5>
+            <div>Organize your research with saved documents, notes, and smarter search.</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center h-100 px-3">
+            <div class="bg-brand-pale p-4 rounded-3 h2 mb-3">
+              <i class="bi bi-bell"></i>
+            </div>
+            <h5 class="fw-semibold">Stay Current</h5>
+            <div>Get alerts on new cases, citations, and legislation changes you care about.</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center h-100 px-3">
+            <div class="bg-brand-pale p-4 rounded-3 h2 mb-3">
+              <i class="bi bi-search"></i>
+            </div>
+            <h5 class="fw-semibold">Work Smarter</h5>
+            <div>Use advanced analysis and AI tools to uncover insights and connections.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container my-5">
+    <!-- Benefit 1 -->
+    <section class="benefit mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 col-md-6">
+          <span class="text-uppercase text-secondary fw-bold">Benefit</span>
+          <h2 class="fw-bold mt-1">Research with confidence</h2>
+          <p class="text-muted">
+            Stop wasting time hunting through PDFs and scattered sources. Spend less time searching and more time applying the law.
+          </p>
+          <ul class="list-unstyled check-list">
+            <li>✔ Precise and relevant results (full-text + semantic search)</li>
+            <li>✔ Save, annotate and download key documents</li>
+            <li>✔ Judgment flynotes &amp; summaries for fast comprehension</li>
+            <li>✔ AI-powered suggestions to surface related materials</li>
+          </ul>
+          <div class="mt-4">
+            <a href="{% url 'subscription_pricing' %}"
+               class="btn btn-outline-primary">Sign up for free</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="{% static 'images/subscribe-save.gif' %}"
+               alt="Save and organize research"
+               class="img-fluid"/>
+        </div>
+      </div>
+    </section>
+    <!-- Benefit 2 -->
+    <section class="benefit mb-5">
+      <div class="row align-items-center g-4 flex-lg-row-reverse">
+        <div class="col-lg-8 col-md-6">
+          <span class="text-uppercase text-secondary fw-bold">Benefit</span>
+          <h2 class="fw-bold mt-1">Never miss what matters</h2>
+          <p class="text-muted">
+            Stay ahead of new developments without constant manual monitoring. My LawLibrary keeps watch for you.
+          </p>
+          <ul class="list-unstyled check-list">
+            <li>✔ Search alerts (including advanced &amp; boolean queries)</li>
+            <li>✔ Follow courts and topics for new decisions</li>
+            <li>✔ Judgment citation alerts</li>
+            <li>✔ Legislation update alerts</li>
+          </ul>
+          <div class="mt-4">
+            <a href="{% url 'subscription_pricing' %}"
+               class="btn btn-outline-primary">See plans</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="{% static 'images/subscribe-follow.gif' %}"
+               alt="Follow courts and topics"
+               class="img-fluid"/>
+        </div>
+      </div>
+    </section>
+    <!-- Benefit 3 -->
+    <section class="benefit mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 col-md-6">
+          <span class="text-uppercase text-secondary fw-bold">Benefit</span>
+          <h2 class="fw-bold mt-1">See the bigger picture</h2>
+          <p class="text-muted">
+            Understand not just what the law says, but how it has evolved and how it’s being applied.
+          </p>
+          <ul class="list-unstyled check-list">
+            <li>
+              ✔ Compare current vs. past versions of legislation (“What changed?”)
+            </li>
+            <li>
+              ✔ Case histories, appealed outcomes &amp; citation context
+            </li>
+            <li>
+              ✔ Explore uncommenced and unconstitutional legislation provisions
+            </li>
+          </ul>
+          <div class="mt-4">
+            <a href="{% url 'subscription_pricing' %}"
+               class="btn btn-outline-primary">Try Pro features</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="{% static 'images/subscribe-amendment.gif' %}"
+               alt="Compare current and past versions"
+               class="img-fluid"/>
+        </div>
+      </div>
+    </section>
+    <section class="my-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <span class="text-uppercase text-secondary fw-bold">Trusted</span>
+          <h3 class="fw-semibold mt-1">
+            Built for legal professionals
+          </h3>
+          <p class="mb-3">
+            Designed in partnership with the Law Society of South Africa to put professional research tools within reach of every practitioner.
+          </p>
+          <div>
+            <img src="{% static 'images/lssa-logo.png' %}"
+                 class="img-fluid my-3"
+                 style="max-width: 200px"
+                 alt="Law Society of South Africa logo"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center my-5">
+      <h2 class="fw-bold">
+        Ready to work faster and smarter?
+      </h2>
+      <p class="lead mb-4">
+        Choose the plan that fits your work and start for free today.
+      </p>
+      <a href="{% url 'subscription_pricing' %}"
+         class="btn btn-primary btn-lg">See plans &amp; pricing</a>
+    </section>
+  </div>
+{% endblock %}
