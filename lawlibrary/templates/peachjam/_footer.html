@@ -15,6 +15,15 @@
   </p>
 {% endblock %}
 {% block second-content-column %}
+  <h5>{% blocktrans %}Subscribe to {{ MY_LII }}{% endblocktrans %}</h5>
+  <ol class="list-unstyled mb-4">
+    <li>
+      <a href="{% url 'subscribe' %}">Subscriptions</a>
+    </li>
+    <li>
+      <a href="{% url 'subscription_pricing' %}">Pricing</a>
+    </li>
+  </ol>
   <h5>{% trans 'Our partners' %}</h5>
   <div>
     <a href="https://africanlii.org/" target="_blank" rel="noreferrer">AfricanLII</a>
