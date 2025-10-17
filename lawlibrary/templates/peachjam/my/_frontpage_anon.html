@@ -1,7 +1,7 @@
 {% load static i18n %}
-<div class="row align-items-center g-4">
+<h2 class="mb-2">{{ MY_LII }}</h2>
+<div class="row g-4">
   <div class="col-lg-7">
-    <h2 class="mb-2">{{ MY_LII }}</h2>
     <p class="lead mb-3">
       Your personal research space — save documents, add notes, and get updates when the law changes.
     </p>
@@ -9,17 +9,21 @@
       <a href="{% url 'account_signup' %}" class="btn btn-primary">{% trans "Sign up" %}</a>
       <a href="{% url 'account_login' %}" class="btn btn-outline-primary">{% trans "Log in" %}</a>
     </div>
-    <div class="small text-muted d-block mt-4">
+    <div class="small text-muted d-block my-3">
       Want more features? View <a href="{% url 'subscription_pricing' %}">premium subscriptions</a>.
-      Legal practioners <a href="{% url 'lssa' %}">get up to 25% off</a> in partnership with the <strong>Law Society of South Africa</strong>.
     </div>
   </div>
   <div class="col-lg-5">
-    <div class="d-flex justify-content-lg-end justify-content-center">
+    <div class="d-flex">
       <img src="{% static 'images/lssa-logo.png' %}"
            alt="Law Society of South Africa"
-           class="img-fluid"
+           class="img-fluid me-3"
            style="max-height:80px"/>
+      <div>
+        Legal practioners get up to 25% off in partnership with the <strong class="text-nowrap">Law Society of South Africa</strong>.
+        <br/>
+        <a href="{% url 'lssa' %}" class="btn btn-outline-primary mt-3">Activate your discount</a>
+      </div>
     </div>
   </div>
 </div>
