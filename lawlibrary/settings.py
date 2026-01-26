@@ -79,3 +79,5 @@ if not DEBUG:  # noqa
     # We can therefore set long-lived cache headers and serve them from a custom domain.
     AWS_S3_OBJECT_PARAMETERS = {"CacheControl": f"max-age={86400*5}"}
     AWS_S3_CUSTOM_DOMAIN = "media.lawlibrary.org.za"
+
+TEMPLATED_EMAIL_BACKEND = "peachjam_pay.emails.PeachjamPayTemplateEmailBackend"
