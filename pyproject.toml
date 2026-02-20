@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "peachjam[ml] @ git+https://github.com/laws-africa/peachjam.git@5c2ef703c5108ac3fb66bd982570487503895a94",
+    "peachjam[ml] @ git+https://github.com/laws-africa/peachjam.git@1eb2dc9a1676e6e34307c19525cf6a5365036ca3",
     "peachjam-pay @ git+https://github.com/laws-africa/peachjam-pay.git@0add1f578fc7a3cf74db39a95fa167b712014e18",
 ]
 
