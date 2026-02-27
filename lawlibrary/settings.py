@@ -83,5 +83,5 @@ if not DEBUG:  # noqa
     AWS_S3_CUSTOM_DOMAIN = "media.lawlibrary.org.za"
 
 
-PEACHJAM["AUTH_OTP"] = True
+PEACHJAM["AUTH_OTP"] = True  # noqa
 ACCOUNT_LOGIN_BY_CODE_ENABLED = True
