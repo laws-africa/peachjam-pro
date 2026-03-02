@@ -16,12 +16,12 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "peachjam[ml] @ git+https://github.com/laws-africa/peachjam.git@02d8c6933cf761dfd6cf0cf705959127655633e5",
-    "peachjam-pay @ git+https://github.com/laws-africa/peachjam-pay.git@6c5372f3ef63800a7f61ec053050dc3e645a4907",
+    "peachjam[ml] @ git+https://github.com/laws-africa/peachjam.git@e20b8051d770dc1822d64e0b6cd6ce0c4f5bf92c",
+    "peachjam-pay @ git+https://github.com/laws-africa/peachjam-pay.git@7be776da02c600fef48a84d376f77d57cc7bee70",
 ]
 
 [project.optional-dependencies]
