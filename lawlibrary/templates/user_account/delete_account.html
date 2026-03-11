@@ -4,7 +4,7 @@
   {% if has_paid_subscription %}
     <div class="alert alert-warning" role="alert">
       <p class="mb-2">
-        {% trans "You have a paid subscription. If you no longer need your current plan, you can change your subscription instead of deleting your account." %}
+        {% trans "You have a paid subscription. If you no longer need it, you can downgrade to a free plan instead of deleting your account." %}
       </p>
       <div class="d-flex flex-wrap gap-2">
         <a href="{% url 'change_subscription' %}"
