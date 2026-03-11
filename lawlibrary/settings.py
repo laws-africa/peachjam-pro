@@ -28,6 +28,7 @@ JAZZMIN_SETTINGS["site_brand"] = "Lawlibrary.org.za"  # noqa
 PEACHJAM["MULTIPLE_LOCALITIES"] = True  # noqa
 PEACHJAM["CHAT_ENABLED"] = True  # noqa
 PEACHJAM["CHAT_PUBLIC"] = True  # noqa
+PEACHJAM["CUSTOMERIO_CLASS"] = "peachjam_pay.customerio.CustomerIO"  # noqa
 PEACHJAM["PDFJS_TO_TEXT"] = (  # noqa
     "../peachjam/bin/pdfjs-to-text" if DEBUG else "pdfjs-to-text"  # noqa
 )
