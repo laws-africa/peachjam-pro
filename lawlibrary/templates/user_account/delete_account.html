@@ -1,56 +1,18 @@
-{% extends 'user_account/layout.html' %}
+{% extends 'user_account/delete_account.html' %}
 {% load i18n %}
-{% block title %}
-  {% trans "Delete account" %} {{ block.super }}
-{% endblock %}
-{% block account-content %}
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <h2>{% trans "Delete account" %}</h2>
-      {% if has_paid_subscription %}
-        <div class="alert alert-warning" role="alert">
-          <p class="mb-2">
-            {% trans "You have a paid subscription. If you no longer need your current plan, you can change your subscription instead of deleting your account." %}
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="{% url 'change_subscription' %}"
-               class="btn btn-primary text-white">{% trans "Change subscription" %}</a>
-            <a href="{% url 'subscription_pricing' %}" class="btn btn-link">{% trans "Compare plans" %}</a>
-          </div>
-        </div>
-      {% else %}
-        <div class="alert alert-secondary" role="alert">{% trans "You have a free account." %}</div>
-      {% endif %}
-      <p>
-        {% trans "Deleting your account is permanent. Your annotations, follows, saved searches and saved documents will be deleted, and your personal information will be removed from your account." %}
+{% block paid-account %}
+  {% if has_paid_subscription %}
+    <div class="alert alert-warning" role="alert">
+      <p class="mb-2">
+        {% trans "You have a paid subscription. If you no longer need your current plan, you can change your subscription instead of deleting your account." %}
       </p>
-      <form method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-          <label class="form-label" for="{{ form.deleted_reason.id_for_label }}">{{ form.deleted_reason.label }}</label>
-          {{ form.deleted_reason }}
-          {% if form.deleted_reason.errors %}
-            <div class="text-danger">
-              {% for error in form.deleted_reason.errors %}<p>{{ error }}</p>{% endfor %}
-            </div>
-          {% endif %}
-        </div>
-        <div class="form-check mb-3">
-          {{ form.confirm_delete }}
-          <label class="form-check-label" for="{{ form.confirm_delete.id_for_label }}">{{ form.confirm_delete.label }}</label>
-          {% if form.confirm_delete.errors %}
-            <div class="text-danger">
-              {% for error in form.confirm_delete.errors %}<p>{{ error }}</p>{% endfor %}
-            </div>
-          {% endif %}
-        </div>
-        <button type="submit"
-                class="btn btn-danger"
-                data-confirm="{% trans 'Are you sure you want to delete your account' %}"
-                hx-confirm="{% trans 'Are you sure you want to delete your account' %}">
-          {% trans "Delete account" %}
-        </button>
-      </form>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="{% url 'change_subscription' %}"
+           class="btn btn-primary text-white">{% trans "Change subscription" %}</a>
+        <a href="{% url 'subscription_pricing' %}" class="btn btn-link">{% trans "Compare plans" %}</a>
+      </div>
     </div>
-  </div>
+  {% else %}
+    <div class="alert alert-secondary" role="alert">{% trans "You have a free account." %}</div>
+  {% endif %}
 {% endblock %}
