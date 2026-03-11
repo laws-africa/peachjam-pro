@@ -13,7 +13,8 @@
             {% trans "You have a paid subscription. If you no longer need your current plan, you can change your subscription instead of deleting your account." %}
           </p>
           <div class="d-flex flex-wrap gap-2">
-            <a href="{% url 'change_subscription' %}" class="btn btn-primary">{% trans "Change subscription" %}</a>
+            <a href="{% url 'change_subscription' %}"
+               class="btn btn-primary text-white">{% trans "Change subscription" %}</a>
             <a href="{% url 'subscription_pricing' %}" class="btn btn-link">{% trans "Compare plans" %}</a>
           </div>
         </div>
