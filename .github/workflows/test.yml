@@ -51,6 +51,11 @@ jobs:
       env:
         DATABASE_URL: "postgres://postgres:postgres@localhost:5432/peach-jam"
         TEST_RUNNER: "xmlrunner.extra.djangotestrunner.XMLTestRunner"
+        LAWSAFRICA_API_KEY: "testing"
+        LANGFUSE_PUBLIC_KEY: "testing"
+        LANGFUSE_SECRET_KEY: "testing"
+        LANGFUSE_TRACING_ENVIRONMENT: "testing"
+        OPENAI_API_KEY: "testing"
       run: |
         pre-commit run --all-files
         python manage.py test ${{ matrix.app }} --settings=${{ matrix.app }}.settings
