@@ -19,6 +19,10 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.openid_connect",
 ] + INSTALLED_APPS  # noqa
 
+ALLOWED_HOSTS = build_allowed_hosts(  # noqa
+    "lawlibrary.org.za", "www.lawlibrary.org.za"
+)
+
 ROOT_URLCONF = "lawlibrary.urls"
 
 JAZZMIN_SETTINGS["site_title"] = "Lawlibrary"  # noqa
